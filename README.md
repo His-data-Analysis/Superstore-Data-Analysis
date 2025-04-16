@@ -1,6 +1,6 @@
 # Superstore-Data-Analysis
-The main purpose of this project is to learn SQL and POWER BI and the also to learn about the sales insights from this dataset.
-I took the dataset for this analysis is from the following link:
+The main purpose of this project is to learn SQL and POWER BI and eventually i learnt about sales performance from this dataset.
+I took the dataset for this analysis from the following link:
     https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
 I used MYSQL WORKBENCH for data cleaning and data analysis and POWER BI DESKTOP for the VISUALIZATION.
 Thanks,
