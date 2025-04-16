@@ -2,23 +2,24 @@ select * from superstore limit 20;
 
 -- What are total sales and total profits of each year?
 	select 	
-		year(order_date) as yearly,
-		round(sum(sales), 2) as 'total_sales ($)',
-		round(sum(profit), 2) as 'total_profit ($)'
+	    year(order_date) as yearly,
+	    round(sum(sales), 2) as 'total_sales ($)',
+	    round(sum(profit), 2) as 'total_profit ($)'
 	from superstore
    	group by yearly
     	order by yearly desc;
+
 -- What are the total profits and total sales per quarter?
 	select
-		year(order_date) as 'Year',
-		case
-			when month(order_date) in (1,2,3) then 'Q1'
-			when month(order_date) in (4,5,6) then 'Q2'
-			when month(order_date) in (7,8,9) then 'Q3'
-			else 'Q4'
-			end as 'Quarter',
-			round(sum(sales),2) as 'Total sales ($)',
-			round(sum(profit),2) as 'Total Profit ($)'
+	    year(order_date) as 'Year',
+	    case
+		when month(order_date) in (1,2,3) then 'Q1'
+		when month(order_date) in (4,5,6) then 'Q2'
+		when month(order_date) in (7,8,9) then 'Q3'
+		else 'Q4'
+		end as 'Quarter',
+		round(sum(sales),2) as 'Total sales ($)',
+		round(sum(profit),2) as 'Total Profit ($)'
 	from superstore
 	group by `Year`, `Quarter`
 	order by `Year`, `Quarter`;
